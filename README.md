@@ -5,3 +5,5 @@ Kotitehtävien palautukset kurssille ICT4TN022-3018 Configuration Management Sys
 - H2 Package-File-service
 - H3 Git
 - H4 Shell scrpits
+- H5 Windows
+- H6 Vagrant, Salt
