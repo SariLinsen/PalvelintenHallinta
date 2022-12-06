@@ -20,3 +20,7 @@ hyväksymättömien avaimien listassa, josta sen hyväksyin. Tarkistin vielä et
 ## Git
 
 Seuraavaksi asensin herralle gitin ja kloonasin sille Githubiin tekemäni LAMP-varaston.
+
+## Apache
+
+Aloitin asentamalla ensin Apachen käsin. Tarkistin curlilla että Apachen default-sivu tulee näkyviin ja muokkasin siihen helloworldin. 
