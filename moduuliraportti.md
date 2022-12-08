@@ -138,8 +138,11 @@ Tämän jälkeen tein taas uuden koneen vagrantilla ja testasin moduulin käytt�
 
 ![image](https://user-images.githubusercontent.com/113497086/206432344-18c77a22-73bd-4d3f-9d67-d5169dcee273.png)
 
+Seuraavaksi aloin tehdä top.sls-tiedostoa, jotta yhdellä `sudo salt-call --local state.apply` komennolla saadaan ajettua kaikki top-tiedoston listassa olevat tilat. 
 
+![image](https://user-images.githubusercontent.com/113497086/206439475-bde17504-d7cb-415c-b08d-398050931e24.png)
 
+Poistin script.sh tiedostosta  erilliset apache ja mariadb -tilojen ajamiset ja korvasin sen `sudo salt-call --local state.apply`-rivillä. Tein taas uuden virtuaalikoneen vagrantilla ja testasin. Tilan ajamisessa tuli virhetilanne ja ilmoitus että top-tiedostoa ei löydy. Tajusin että en ollut lisännyt sitä /srv/salt/-kansioon kopioitavaksi, joten eihän salt sitä tietenkään löytänyt. Lisäsin script.sh tilojen kopioinnin yhteyteen `sudo cp top.sls /srv/salt/` -rivin, jonka jälkeen top.sls oli saltin käytössä ja tilan ajaminen onnistui seuraavassa testissä.
 
 Tehtävä on kesken ja päivittyy edetessään.
 
@@ -154,3 +157,5 @@ Hurri, S. 2022. Lemphelper. Luettavissa: https://github.com/santtuhurri/lemphelp
 Karvinen, T. 2016. PostgreSQL Install and One Table Database – SQL CRUD tutorial for Ubuntu. Luettavissa: https://terokarvinen.com/2016/postgresql-install-and-one-table-database-sql-crud-tutorial-for-ubuntu/?fromSearch=postgresql. Luettu: 8.12.2022.
 
 Karvinen, T. 2018. Install MariaDB on Ubuntu 18.04 – Database Management System, the New MySQL. Luettavissa: https://terokarvinen.com/2018/install-mariadb-on-ubuntu-18-04-database-management-system-the-new-mysql/?fromSearch=mariadb. Luettu: 8.12.2022.
+
+Karvinen, T. 2018. Salt States – I Want My Computers Like This. Luettavissa: https://terokarvinen.com/2018/salt-states-i-want-my-computers-like-this/?fromSearch=salt%20states. Luettu: 8.12.2022.
