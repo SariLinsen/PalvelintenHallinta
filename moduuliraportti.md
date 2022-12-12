@@ -3,7 +3,7 @@
 ## Johdanto
 
 Päätin lähteä rakentamaan moduulia, jonka avulla voidaan asentaa LAMP. LAMP tulee sanoista Linux, Apache, MySQL ja PHP/Perl/Python (Linux.fi). Tietokantaohjelmista 
-PostrgreSQL on edelliseltä kurssilta tutumpi kuin MySQL ja ohjelmointikielistä Python oli tutuin, joten valitsin ne tähän. Inspiraatiota sain tehtävässä H4 moduulin kokeilussa testaamastani Santtu Hurrin moduulista. Halusin itsekin kokeilla tehdä moduulin, jonka käyttämiselle olisi selkeät ohjeet ja sen voisi kuka tahansa helposti niiden avulla ottaa käyttöönsä. 
+PostrgreSQL on edelliseltä kurssilta tutumpi kuin MySQL ja näistä ohjelmointikielistä Python oli tutuin, joten valitsin ne tähän. Inspiraatiota sain tehtävässä H4 moduulin kokeilussa testaamastani Santtu Hurrin moduulista. Halusin itsekin kokeilla tehdä moduulin, jonka käyttämiselle olisi selkeät ohjeet ja sen voisi kuka tahansa helposti niiden avulla ottaa käyttöönsä. 
 
 Testaamista nopettaakseni käytin Vagrantia
 virtuaalikoneiden luomiseen. Vagrant luo virtuaalikoneet ilman graafista käyttöliittymää, mutta se riittää testaukseen.
@@ -155,7 +155,6 @@ Tein uuden virtuaalikoneen ja testasin moduulia siinä. Kaikki asennukset meni l
 
 ![image](https://user-images.githubusercontent.com/113497086/206995689-ba1fad5c-31c2-464f-88e1-e463533be40a.png)
 
-Tehtävä on kesken ja päivittyy edetessään.
 
 ## Lähteet
 
