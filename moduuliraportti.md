@@ -144,6 +144,17 @@ Seuraavaksi aloin tehdä top.sls-tiedostoa, jotta yhdellä `sudo salt-call --loc
 
 Poistin script.sh tiedostosta  erilliset apache ja mariadb -tilojen ajamiset ja korvasin sen `sudo salt-call --local state.apply`-rivillä. Tein taas uuden virtuaalikoneen vagrantilla ja testasin. Tilan ajamisessa tuli virhetilanne ja ilmoitus että top-tiedostoa ei löydy. Tajusin että en ollut lisännyt sitä /srv/salt/-kansioon kopioitavaksi, joten eihän salt sitä tietenkään löytänyt. Lisäsin script.sh tilojen kopioinnin yhteyteen `sudo cp top.sls /srv/salt/` -rivin, jonka jälkeen top.sls oli saltin käytössä ja tilan ajaminen onnistui seuraavassa testissä.
 
+## Python
+
+Tein ensin python3-paketin asentavan tilan ja testasin että se toimii. Seuraavaksi kirjoitin yksinkertaisen skriptin, joka tulostaa päivämäärän (Geeks for geeks). Muokkasin oikeuksia niin että se toimii kaikilla käyttäjillä kaikkialla hakemistossa. Tämän onnistuttua lisäsin sen pythonin tilaan. 
+
+![image](https://user-images.githubusercontent.com/113497086/206997041-a037cda9-e69f-4b67-82bb-126ad542956f.png)
+
+
+Tein uuden virtuaalikoneen ja testasin moduulia siinä. Kaikki asennukset meni läpi ongelmitta ja tekemäni skriptikin toimi kuten sen oli tarkoituskin. Python-paketin asennuksesta tuli ilmoitus että se on jo asennettu ja se onkin ilmeisesti näissä jo valmiina. Testasin myös että apachen asennukset edelleen toimivat ja mariadb oli myös asentunut. 
+
+![image](https://user-images.githubusercontent.com/113497086/206995689-ba1fad5c-31c2-464f-88e1-e463533be40a.png)
+
 Tehtävä on kesken ja päivittyy edetessään.
 
 ## Lähteet
@@ -159,3 +170,5 @@ Karvinen, T. 2016. PostgreSQL Install and One Table Database – SQL CRUD tutori
 Karvinen, T. 2018. Install MariaDB on Ubuntu 18.04 – Database Management System, the New MySQL. Luettavissa: https://terokarvinen.com/2018/install-mariadb-on-ubuntu-18-04-database-management-system-the-new-mysql/?fromSearch=mariadb. Luettu: 8.12.2022.
 
 Karvinen, T. 2018. Salt States – I Want My Computers Like This. Luettavissa: https://terokarvinen.com/2018/salt-states-i-want-my-computers-like-this/?fromSearch=salt%20states. Luettu: 8.12.2022.
+
+Geeks for geeks 2022. Get current date using Python. Luettavissa: https://www.geeksforgeeks.org/get-current-date-using-python/. Luettu: 12.12.2022.
