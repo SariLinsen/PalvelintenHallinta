@@ -5,8 +5,12 @@
 Päätin lähteä rakentamaan moduulia, jonka avulla voidaan asentaa LAMP. LAMP tulee sanoista Linux, Apache, MySQL ja PHP/Perl/Python (Linux.fi). Tietokantaohjelmista 
 PostrgreSQL on edelliseltä kurssilta tutumpi kuin MySQL ja näistä ohjelmointikielistä Python oli tutuin, joten valitsin ne tähän. Inspiraatiota sain tehtävässä H4 moduulin kokeilussa testaamastani Santtu Hurrin moduulista. Halusin itsekin kokeilla tehdä moduulin, jonka käyttämiselle olisi selkeät ohjeet ja sen voisi kuka tahansa helposti niiden avulla ottaa käyttöönsä. 
 
-Testaamista nopettaakseni käytin Vagrantia
-virtuaalikoneiden luomiseen. Vagrant luo virtuaalikoneet ilman graafista käyttöliittymää, mutta se riittää testaukseen.
+## Harjoitusympäristö
+
+Harjoitus on tehty omalla koneella kotonani. Pääkoneena HP-kannettava, jossa Windows 11 Home käyttöjärjestelmä, 16GB RAM, 476GB levytilaa. Virtuaalikoneena 
+Oracle VirtualBox 6.1.38, Linux Debian 11, 4GB RAM, 60GB levytilaa.
+
+Testaamista nopettaakseni käytin Vagrantia virtuaalikoneiden luomiseen, versiona Linux Debian 11/bullseye. Vagrant luo virtuaalikoneet ilman graafista käyttöliittymää, mutta se riittää testaukseen.
 
 ## Virtuaalikoneiden asennus ja yhdistäminen
 
@@ -50,7 +54,7 @@ Lisäämällä public_html kotihakemistoon, kotisivut päivittyvät niin että n
 
 ## Skriptitiedosto
 
-Nyt kun sain ensimmäisen salt-tilan rakennettua aloitin tekemään tiedostoa, jonka avulla moduulin asennus toimii. Tiedosto ladataan wgetin avulla ja ajamalla skripti moduuli hoitaa asennukset. Ihan ensin kokeilin tiedoston avulla pakettilistan päivitystä ja yksinkertaisia tekstejä. Tähän katsoin apuja Santtu Hurrin vastaavasta tiedostosta run.sh. Aluksi tiedosto näytti tältä:
+Nyt kun sain ensimmäisen salt-tilan rakennettua aloitin tekemään tiedostoa, jonka avulla moduulin asennus toimii. Tiedosto ladataan wgetin avulla ja ajamalla tiedosto moduuli hoitaa asennukset. Ihan ensin kokeilin tiedoston avulla pakettilistan päivitystä ja yksinkertaisia tekstejä. Tähän katsoin apuja Santtu Hurrin vastaavasta tiedostosta run.sh. Aluksi tiedosto näytti tältä:
 
 ![image](https://user-images.githubusercontent.com/113497086/206383803-dc670f80-8ef7-4087-9cbf-9d797445d073.png)
 
@@ -155,6 +159,7 @@ Tein uuden virtuaalikoneen ja testasin moduulia siinä. Kaikki asennukset meni l
 
 ![image](https://user-images.githubusercontent.com/113497086/206995689-ba1fad5c-31c2-464f-88e1-e463533be40a.png)
 
+Moduuli ja sen käyttöohjeet löytyvät: https://github.com/SariLinsen/LAMP
 
 ## Lähteet
 
