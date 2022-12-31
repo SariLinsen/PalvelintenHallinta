@@ -7,3 +7,5 @@ Kotitehtävien palautukset kurssille ICT4TN022-3018 Configuration Management Sys
 - H4 Shell scrpits
 - H5 Windows
 - H6 Vagrant, Salt
+- moduuliraportti, lopputehtävän raportti
+- Kurssin lopputehtävä: https://github.com/SariLinsen/LAMP
